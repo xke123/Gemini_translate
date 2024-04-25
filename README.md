@@ -1,5 +1,7 @@
 # PDF 文件翻译脚本
-本文档为您提供使用指南和背景信息，帮助您有效使用 PDF 文件翻译脚本。该脚本使用 Google 的 Gemini API 来翻译 PDF 文件中的文本，并支持将翻译结果输出为文本文件。
+
+本文档为您提供使用指南和背景信息，帮助您有效使用 PDF 文件翻译脚本。
+该脚本使用 Google 的 Gemini API 来翻译 PDF 文件中的文本，并支持将翻译结果输出为文本文件。
 
 ## 功能描述
 
@@ -12,24 +14,22 @@
 ## 系统要求
 
 Python 3.7 或更高版本。
-安装有以下 Python 库：pdfminer.six, google-generativeai, configparser, argparse。
+安装 requirements.txt 中指定的库。
 
 ## 安装依赖
 
 在运行脚本前，请确保已安装所有必需的依赖。可以通过以下命令安装：
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 ## 配置文件
 
 您需要创建一个名为 settings.cfg 的配置文件，该文件应包含以下内容：
 
-ini
-Copy code
 [option]
 google-apikey = your_gemini_api_key
-prompt = Please translate the following text into:
+prompt = Please translate the following text into Chinese:
 bilingual-output = True
 langcode = en
 google-apikey: 您的 Google Gemini API 密钥。
@@ -41,7 +41,7 @@ langcode: 输出文件的语言代码。
 
 使用以下命令行语法运行脚本：
 
-python geminiTrans.py <path_to_pdf_file>
+`python geminiTrans.py <path_to_pdf_file>`
 
 其中 <path_to_pdf_file> 是您希望翻译的 PDF 文件的路径。
 
