@@ -1,0 +1,8 @@
+pdfminer
+ebooklib
+beautifulsoup4
+python-docx
+pandas
+tqdm
+configparser
+google-generativeai
